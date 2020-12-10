@@ -1,0 +1,9 @@
+.jfx-hamburger  StackPane {
+	 -fx-background-color : "#009df1";
+}
+
+.btnNuevo:hover{
+    -fx-background-color:  "#193983";
+/*-fx-background-radius :  30 0 0 30 ;*/
+}
+
