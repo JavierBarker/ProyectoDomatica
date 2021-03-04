@@ -13,7 +13,7 @@ public class Conexion {
         String host = "byzuglvnczebyf5s4a4d-mysql.services.clever-cloud.com";
         String db = "byzuglvnczebyf5s4a4d";
         try{
-            Class.forName("com.mysql.jdbc.Driver").newInstance();;
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
             conexion = DriverManager.getConnection("jdbc:mysql://"+host+":3306/"+db+"?serverTimezone=UTC",usuario,password);
         }catch(ClassNotFoundException | SQLException | InstantiationException | IllegalAccessException e){
             e.printStackTrace();
