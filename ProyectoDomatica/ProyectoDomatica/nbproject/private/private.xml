@@ -3,13 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Barker/Desktop/java%20y%20base%20de%20datos/Proyectos%20terminados%20con%20DB/ProyectoDomatica/ProyectoDomatica/src/org/javierbarker/system/MainApp.java</file>
-            <file>file:/C:/Users/Barker/Desktop/java%20y%20base%20de%20datos/Proyectos%20terminados%20con%20DB/ProyectoDomatica/ProyectoDomatica/src/org/javierbarker/controller/PersonaViewController.java</file>
-            <file>file:/C:/Users/Barker/Desktop/java%20y%20base%20de%20datos/Proyectos%20terminados%20con%20DB/ProyectoDomatica/ProyectoDomatica/src/org/javierbarker/bd/Conexion.java</file>
-            <file>file:/C:/Users/Barker/Desktop/java%20y%20base%20de%20datos/Proyectos%20terminados%20con%20DB/ProyectoDomatica/ProyectoDomatica/src/org/javierbarker/controller/LogInViewController.java</file>
-            <file>file:/C:/Users/Barker/Desktop/java%20y%20base%20de%20datos/Proyectos%20terminados%20con%20DB/ProyectoDomatica/ProyectoDomatica/src/org/javierbarker/controller/MenuLateralController.java</file>
-            <file>file:/C:/Users/Barker/Desktop/java%20y%20base%20de%20datos/Proyectos%20terminados%20con%20DB/ProyectoDomatica/ProyectoDomatica/build.xml</file>
-            <file>file:/C:/Users/Barker/Desktop/java%20y%20base%20de%20datos/Proyectos%20terminados%20con%20DB/ProyectoDomatica/ProyectoDomatica/src/org/javierbarker/controller/MenuViewController.java</file>
+            <file>file:/C:/git/ProyectoDomatica/ProyectoDomatica/ProyectoDomatica/src/org/javierbarker/controller/InicioViewController.java</file>
+            <file>file:/C:/git/ProyectoDomatica/ProyectoDomatica/ProyectoDomatica/src/org/javierbarker/bd/Conexion.java</file>
+            <file>file:/C:/git/ProyectoDomatica/ProyectoDomatica/ProyectoDomatica/src/org/javierbarker/controller/LogInViewController.java</file>
         </group>
     </open-files>
 </project-private>
