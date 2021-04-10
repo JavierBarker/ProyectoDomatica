@@ -1,7 +1,9 @@
 /*drop database if exists DBProyectoDomotica;
 create database DBProyectoDomotica;
 use DBProyectoDomotica;*/
-use byzuglvnczebyf5s4a4d;
+drop database if exists blirukoibzfmw7p6xec7;
+create database blirukoibzfmw7p6xec7;
+use blirukoibzfmw7p6xec7;
 /*buscar la base de datos remota en clever cloud*/
 create table Rol(
 	codigoRol int not null auto_increment,
@@ -35,9 +37,9 @@ delimiter $$
 	create procedure sp_ListarRoles()
 		begin 
 			select 
-				byzuglvnczebyf5s4a4d.Rol.codigoRol,
-                byzuglvnczebyf5s4a4d.Rol.rol
-			from byzuglvnczebyf5s4a4d.Rol;
+				blirukoibzfmw7p6xec7.Rol.codigoRol,
+                blirukoibzfmw7p6xec7.Rol.rol
+			from blirukoibzfmw7p6xec7.Rol;
         end $$
 delimiter ;
 
@@ -48,7 +50,7 @@ call sp_ListarRoles();
 delimiter $$
 	create procedure sp_AgregarRoles( in roles varchar(25))
 		begin
-			insert into byzuglvnczebyf5s4a4d.Rol(rol)
+			insert into blirukoibzfmw7p6xec7.Rol(rol)
 				values(roles);
 		end $$
 delimiter ;
@@ -68,10 +70,10 @@ delimiter $$
 	create procedure sp_ListarUsuarios()
 		begin
 			select 
-				byzuglvnczebyf5s4a4d.Usuario.usuario,
-                byzuglvnczebyf5s4a4d.Usuario.password0,
-                byzuglvnczebyf5s4a4d.Usuario.rol_codigoRol
-			from byzuglvnczebyf5s4a4d.Usuario;
+				blirukoibzfmw7p6xec7.Usuario.usuario,
+                blirukoibzfmw7p6xec7.Usuario.password0,
+                blirukoibzfmw7p6xec7.Usuario.rol_codigoRol
+			from blirukoibzfmw7p6xec7.Usuario;
         end $$
 delimiter ;
 
@@ -82,7 +84,7 @@ call sp_ListarUsuarios();
 delimiter $$
 	create procedure sp_AgregarUsuario(in user0 varchar(80), pass varchar(25), rol0 int)
 		begin
-			insert into byzuglvnczebyf5s4a4d.Usuario(usuario, password0, rol_codigoRol)
+			insert into blirukoibzfmw7p6xec7.Usuario(usuario, password0, rol_codigoRol)
 				values (user0, pass, rol0);
         end $$
 delimiter ;
@@ -100,13 +102,13 @@ delimiter $$
 	create procedure sp_BuscarUsuario(in user0 varchar(80), pass varchar(25), rol0 int)
 		begin
 			select 
-				byzuglvnczebyf5s4a4d.Usuario.usuario,
-                byzuglvnczebyf5s4a4d.Usuario.password0,
-                byzuglvnczebyf5s4a4d.Usuario.rol_codigoRol
-			from byzuglvnczebyf5s4a4d.Usuario where binary
-				byzuglvnczebyf5s4a4d.Usuario.usuario = user0 and
-                byzuglvnczebyf5s4a4d.Usuario.password0 = pass and
-                byzuglvnczebyf5s4a4d.Usuario.rol_codigoRol = rol0;
+				blirukoibzfmw7p6xec7.Usuario.usuario,
+                blirukoibzfmw7p6xec7.Usuario.password0,
+                blirukoibzfmw7p6xec7.Usuario.rol_codigoRol
+			from blirukoibzfmw7p6xec7.Usuario where binary
+				blirukoibzfmw7p6xec7.Usuario.usuario = user0 and
+                blirukoibzfmw7p6xec7.Usuario.password0 = pass and
+                blirukoibzfmw7p6xec7.Usuario.rol_codigoRol = rol0;
         end $$
 delimiter ;
 
@@ -125,11 +127,11 @@ delimiter $$
 	create procedure sp_ListarPersonas()
 		begin
 			select 
-				byzuglvnczebyf5s4a4d.Persona.codigoPersona,
-                byzuglvnczebyf5s4a4d.Persona.DPI,
-                byzuglvnczebyf5s4a4d.Persona.nombrePersona,
-                byzuglvnczebyf5s4a4d.Persona.fechaIngreso
-			from byzuglvnczebyf5s4a4d.Persona;
+				blirukoibzfmw7p6xec7.Persona.codigoPersona,
+                blirukoibzfmw7p6xec7.Persona.DPI,
+                blirukoibzfmw7p6xec7.Persona.nombrePersona,
+                blirukoibzfmw7p6xec7.Persona.fechaIngreso
+			from blirukoibzfmw7p6xec7.Persona;
 		end $$
 delimiter ;
 
@@ -140,7 +142,7 @@ call sp_ListarPersonas();
 delimiter $$
 	create procedure sp_AgregarPersona(in dpi varchar(25), nombre varchar(125), fecha date)
 		begin
-			insert into byzuglvnczebyf5s4a4d.Persona (DPI, nombrePersona, fechaIngreso)
+			insert into blirukoibzfmw7p6xec7.Persona (DPI, nombrePersona, fechaIngreso)
 				values(dpi, nombre, fecha);
         end $$
 delimiter ;
@@ -156,7 +158,7 @@ call sp_AgregarPersona("445111177", "Sergio Mayen", "2020/06/17");
 delimiter $$
 	create procedure sp_ActualizarPersona(in id int, dpi varchar(25), nombre varchar(125), fecha date)
 		begin
-			update byzuglvnczebyf5s4a4d.Persona set DPI=dpi, nombrePersona=nombre, fechaIngreso=fecha
+			update blirukoibzfmw7p6xec7.Persona set DPI=dpi, nombrePersona=nombre, fechaIngreso=fecha
 				where codigoPersona=id;
         end $$
 delimiter ;
@@ -170,7 +172,7 @@ call sp_ActualizarPersona(1, "244444444", "Javier Badfddfdf", "2020/09/15");
 delimiter $$
 	create procedure sp_EliminarPersona(in id int)
 		begin
-			delete from byzuglvnczebyf5s4a4d.Persona
+			delete from blirukoibzfmw7p6xec7.Persona
 				where codigoPersona=id;
         end $$
 delimiter ;
@@ -183,11 +185,11 @@ delimiter $$
 	create procedure sp_BuscarPersona(in id int)
 		begin
 			select 
-				byzuglvnczebyf5s4a4d.Persona.codigoPersona,
-                byzuglvnczebyf5s4a4d.Persona.DPI,
-                byzuglvnczebyf5s4a4d.Persona.nombrePersona,
-                byzuglvnczebyf5s4a4d.Persona.fechaIngreso
-			from byzuglvnczebyf5s4a4d.Persona where byzuglvnczebyf5s4a4d.Persona.codigoPersona=id;
+				blirukoibzfmw7p6xec7.Persona.codigoPersona,
+                blirukoibzfmw7p6xec7.Persona.DPI,
+                blirukoibzfmw7p6xec7.Persona.nombrePersona,
+                blirukoibzfmw7p6xec7.Persona.fechaIngreso
+			from blirukoibzfmw7p6xec7.Persona where blirukoibzfmw7p6xec7.Persona.codigoPersona=id;
         end $$
 delimiter ;
 

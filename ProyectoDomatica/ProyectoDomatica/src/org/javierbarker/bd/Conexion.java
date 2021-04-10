@@ -10,8 +10,8 @@ public class Conexion {
     public Conexion(){
         String usuario = "unbagslop0xidpne";
         String password = "Vd7wCLUPbLovViUjoccs";
-        String host = "byzuglvnczebyf5s4a4d-mysql.services.clever-cloud.com";
-        String db = "byzuglvnczebyf5s4a4d";
+        String host = "blirukoibzfmw7p6xec7-mysql.services.clever-cloud.com";
+        String db = "blirukoibzfmw7p6xec7";
         try{
             Class.forName("com.mysql.jdbc.Driver").newInstance();
             conexion = DriverManager.getConnection("jdbc:mysql://"+host+":3306/"+db+"?serverTimezone=UTC",usuario,password);
